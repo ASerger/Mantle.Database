@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29409.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Mantle.Database", "Mantle.Database\Mantle.Database.sqlproj", "{0AAF8FBC-7668-4BED-BFF3-E2787F43392E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0AAF8FBC-7668-4BED-BFF3-E2787F43392E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AAF8FBC-7668-4BED-BFF3-E2787F43392E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AAF8FBC-7668-4BED-BFF3-E2787F43392E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0AAF8FBC-7668-4BED-BFF3-E2787F43392E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AAF8FBC-7668-4BED-BFF3-E2787F43392E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AAF8FBC-7668-4BED-BFF3-E2787F43392E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7A1EFE71-429D-4618-B2CC-A7199295253C}
+	EndGlobalSection
+EndGlobal
