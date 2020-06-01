@@ -5,7 +5,7 @@
 )
 AS
 BEGIN
-	INSERT INTO Mantle.dbo.WeaponClasses(
+	INSERT INTO [dbo].[WeaponClass](
     WeaponName,
     BaseDamageModifier,
     DamageType

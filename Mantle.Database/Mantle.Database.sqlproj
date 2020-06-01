@@ -67,10 +67,17 @@
   <ItemGroup>
     <Build Include="dbo\Tables\EffectClass.sql" />
     <Build Include="dbo\Tables\UniqueWeapons.sql" />
-    <Build Include="dbo\Tables\WeaponClasses.sql" />
+    <Build Include="dbo\Tables\WeaponClass.sql" />
     <Build Include="dbo\Stored Procedures\usp_InputWeaponClass.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Seed\EffectClass.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ArtifactReference Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\SQLDB\Extensions\SqlServer\130\SqlSchemas\master.dacpac">
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\SQLDB\Extensions\SqlServer\130\SqlSchemas\master.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+      <DatabaseVariableLiteralValue>master</DatabaseVariableLiteralValue>
+    </ArtifactReference>
   </ItemGroup>
 </Project>
