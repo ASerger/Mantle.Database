@@ -7,5 +7,5 @@ CREATE TABLE [dbo].[SimpleMeleeWeaponType] (
     [DiceId]            INT             NOT NULL, -- dice throw lookup
     [ModifiedOn]        DATETIMEOFFSET  CONSTRAINT [DF_SimpleWeaponType_ModifiedOn] DEFAULT SYSDATETIMEOFFSET() NOT NULL,
     [ModifiedBy]        VARCHAR(100)    CONSTRAINT [DF_SimpleWeaponType_ModifiedBy] DEFAULT SUSER_SNAME() NOT NULL,
-    CONSTRAINT [PK_SimpleWeaponType_Id] PRIMARY KEY CLUSTERED ([Id] ASC)
+    CONSTRAINT [PK_SimpleMeleeWeaponType_Id] PRIMARY KEY CLUSTERED ([Id] ASC)
 );
