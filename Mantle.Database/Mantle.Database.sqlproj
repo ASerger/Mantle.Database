@@ -69,6 +69,7 @@
     <Build Include="dbo\Tables\EnchantmentPoint.sql" />
     <Build Include="dbo\Tables\RarityLevel.sql" />
     <PostDeploy Include="Scripts\PostDeploy.sql" />
+    <Build Include="dbo\Tables\DamageType.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\Seed\EffectClass.PostDeployment.sql" />
