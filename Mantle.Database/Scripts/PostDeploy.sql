@@ -12,6 +12,7 @@ This script must be set to PostDeploy in the file properties, and all called scr
 --------------------------------------------------------------------------------------
 */
 
+:r .\Seed\DamageType.PostDeployment.sql
 :r .\Seed\EffectClass.PostDeployment.sql
 :r .\Seed\EffectType.PostDeployment.sql
 :r .\Seed\RarityLevel.PostDeployment.sql
