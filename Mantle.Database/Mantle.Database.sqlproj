@@ -76,4 +76,7 @@
     <None Include="Scripts\Seed\EffectType.PostDeployment.sql" />
     <None Include="Scripts\Seed\RarityLevel.PostDeployment.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Seed\DamageType.PostDeployment.sql" />
+  </ItemGroup>
 </Project>
