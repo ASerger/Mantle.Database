@@ -15,3 +15,6 @@ GO
 
 ALTER TABLE [dbo].[DamageType] ADD  CONSTRAINT [DF_DamageType_ModifiedBy]  DEFAULT (suser_sname()) FOR [ModifiedBy]
 GO
+
+ALTER TABLE [dbo].[DamageType] ADD  CONSTRAINT [UQ_DamageType_DamageType] UNIQUE(DamageType)
+GO
