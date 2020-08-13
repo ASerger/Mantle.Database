@@ -29,7 +29,16 @@ IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseProperty WHERE Id = 3)
 BEGIN
 	SET IDENTITY_INSERT dbo.BaseProperty ON
 	INSERT INTO dbo.BaseProperty(Id, Property)
-	VALUES(3, 'Thrown')
+	VALUES(3, 'Thrown (Range 20/60)')
+	SET IDENTITY_INSERT dbo.BaseProperty OFF
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseProperty WHERE Id = 4)
+BEGIN
+	SET IDENTITY_INSERT dbo.BaseProperty ON
+	INSERT INTO dbo.BaseProperty(Id, Property)
+	VALUES(4, 'Two Handed')
 	SET IDENTITY_INSERT dbo.BaseProperty OFF
 END
 GO
