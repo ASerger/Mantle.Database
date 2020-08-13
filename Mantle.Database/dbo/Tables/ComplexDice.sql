@@ -15,17 +15,17 @@ CREATE TABLE [dbo].[ComplexDice]
 GO
 
 ALTER TABLE dbo.ComplexDice
-    ADD CONSTRAINT FK_ComplexDice_1_BaseDice_Id FOREIGN KEY (BaseDiceId_1) REFERENCES dbo.BaseDice(Id);
+    ADD CONSTRAINT FK_ComplexDice_BaseDice_Id_1 FOREIGN KEY (BaseDiceId_1) REFERENCES dbo.BaseDice(Id);
 GO
 
 ALTER TABLE dbo.ComplexDice
-    ADD CONSTRAINT FK_ComplexDice_2_BaseDice_Id FOREIGN KEY (BaseDiceId_2) REFERENCES dbo.BaseDice(Id);
+    ADD CONSTRAINT FK_ComplexDice_BaseDice_Id_2 FOREIGN KEY (BaseDiceId_2) REFERENCES dbo.BaseDice(Id);
 GO
 
 ALTER TABLE dbo.ComplexDice
-    ADD CONSTRAINT FK_ComplexDice_3_BaseDice_Id FOREIGN KEY (BaseDiceId_3) REFERENCES dbo.BaseDice(Id);
+    ADD CONSTRAINT FK_ComplexDice_BaseDice_Id_3 FOREIGN KEY (BaseDiceId_3) REFERENCES dbo.BaseDice(Id);
 GO
 
 ALTER TABLE dbo.ComplexDice
-    ADD CONSTRAINT FK_ComplexDice_4_BaseDice_Id FOREIGN KEY (BaseDiceId_4) REFERENCES dbo.BaseDice(Id);
+    ADD CONSTRAINT FK_ComplexDice_BaseDice_Id_4 FOREIGN KEY (BaseDiceId_4) REFERENCES dbo.BaseDice(Id);
 GO
