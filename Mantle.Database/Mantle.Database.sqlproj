@@ -92,4 +92,10 @@
   <ItemGroup>
     <None Include="Scripts\Seed\ComplexDice.PostDeployment.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Seed\BaseWeaponCategory.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Seed\BaseProperty.PostDeployment.sql" />
+  </ItemGroup>
 </Project>
