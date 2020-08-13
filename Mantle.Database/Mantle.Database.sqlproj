@@ -70,7 +70,7 @@
     <Build Include="dbo\Tables\RarityLevel.sql" />
     <PostDeploy Include="Scripts\PostDeploy.sql" />
     <Build Include="dbo\Tables\DamageType.sql" />
-    <Build Include="dbo\Tables\MeleeProperties.sql" />
+    <Build Include="dbo\Tables\WeaponProperties.sql" />
     <Build Include="dbo\Tables\BaseDice.sql" />
     <Build Include="dbo\Tables\BaseProperty.sql" />
     <Build Include="dbo\Tables\BaseWeaponCategory.sql" />
@@ -81,6 +81,7 @@
     <None Include="Scripts\Seed\EffectType.PostDeployment.sql" />
     <None Include="Scripts\Seed\RarityLevel.PostDeployment.sql" />
     <None Include="Serger_Mantle.Database.publish.xml" />
+    <None Include="Serger_Mantle_UnsafeDeploy.Database.publish.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\Seed\DamageType.PostDeployment.sql" />
@@ -98,6 +99,6 @@
     <None Include="Scripts\Seed\BaseProperty.PostDeployment.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Scripts\Seed\MeleeProperties.PostDeployment.sql" />
+    <None Include="Scripts\Seed\WeaponProperties.PostDeployment.sql" />
   </ItemGroup>
 </Project>
