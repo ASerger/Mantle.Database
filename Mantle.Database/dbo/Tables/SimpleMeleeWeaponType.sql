@@ -1,7 +1,7 @@
 CREATE TABLE [dbo].[SimpleMeleeWeaponType] (
     [Id]                    INT             IDENTITY (1, 1) NOT NULL,
-    [Cost]                  NUMERIC(12,2)   NOT NULL,
-    [Weight]                VARCHAR(20)     NOT NULL,
+    [Cost]                  NUMERIC(12,2)   NOT NULL, -- weight and cost should probably find their way onto the properties table?
+    [Weight]                VARCHAR(20)     NOT NULL, -- weight and cost should probably find their way onto the properties table?
     [DamageTypeId]          INT             NOT NULL, -- base damage type lookup (slash/bludgeon/etc)
     [MeleePropertiesId]     INT             NOT NULL,
     [BaseDiceId]            INT             NOT NULL, -- dice throw lookup
