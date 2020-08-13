@@ -75,13 +75,21 @@
     <Build Include="dbo\Tables\BaseDice.sql" />
     <Build Include="dbo\Tables\BaseProperty.sql" />
     <Build Include="dbo\Tables\BaseWeaponCategory.sql" />
+    <Build Include="dbo\Tables\ComplexDice.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\Seed\EffectClass.PostDeployment.sql" />
     <None Include="Scripts\Seed\EffectType.PostDeployment.sql" />
     <None Include="Scripts\Seed\RarityLevel.PostDeployment.sql" />
+    <None Include="Serger_Mantle.Database.publish.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\Seed\DamageType.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Seed\BaseDice.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Seed\ComplexDice.PostDeployment.sql" />
   </ItemGroup>
 </Project>

@@ -16,3 +16,5 @@ This script must be set to PostDeploy in the file properties, and all called scr
 :r .\Seed\EffectClass.PostDeployment.sql
 :r .\Seed\EffectType.PostDeployment.sql
 :r .\Seed\RarityLevel.PostDeployment.sql
+:r .\Seed\BaseDice.PostDeployment.sql
+:r .\Seed\ComplexDice.PostDeployment.sql
