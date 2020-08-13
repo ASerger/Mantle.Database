@@ -71,7 +71,6 @@
     <PostDeploy Include="Scripts\PostDeploy.sql" />
     <Build Include="dbo\Tables\DamageType.sql" />
     <Build Include="dbo\Tables\MeleeProperties.sql" />
-    <Build Include="dbo\Tables\SimpleMeleeWeaponType.sql" />
     <Build Include="dbo\Tables\BaseDice.sql" />
     <Build Include="dbo\Tables\BaseProperty.sql" />
     <Build Include="dbo\Tables\BaseWeaponCategory.sql" />
@@ -97,5 +96,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\Seed\BaseProperty.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Seed\MeleeProperties.PostDeployment.sql" />
   </ItemGroup>
 </Project>

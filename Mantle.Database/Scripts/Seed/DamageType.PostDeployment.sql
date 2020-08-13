@@ -1,4 +1,13 @@
-﻿IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.DamageType WHERE Id = 1)
+﻿IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.DamageType WHERE Id = 0)
+BEGIN
+	SET IDENTITY_INSERT dbo.DamageType ON
+	INSERT INTO dbo.DamageType(Id, DamageType)
+	VALUES(0, 'N/A')
+	SET IDENTITY_INSERT dbo.DamageType OFF
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.DamageType WHERE Id = 1)
 BEGIN
 	SET IDENTITY_INSERT dbo.DamageType ON
 	INSERT INTO dbo.DamageType(Id, DamageType)
