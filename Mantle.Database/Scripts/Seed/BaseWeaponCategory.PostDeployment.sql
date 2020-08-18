@@ -33,3 +33,14 @@ BEGIN
 	SET IDENTITY_INSERT dbo.BaseWeaponCategory OFF
 END
 GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseWeaponCategory WHERE BaseWeaponCategory.WeaponCategory = 'Spear')
+BEGIN
+	INSERT INTO dbo.BaseWeaponCategory(WeaponCategory, Cost, Weight, BaseDiceId, DamageTypeId)
+	VALUES(
+	'Spear', 1.00, 3, 
+	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d6'), 
+	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Piercing')
+	)
+END
+GO

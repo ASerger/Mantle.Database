@@ -103,4 +103,10 @@
   <ItemGroup>
     <None Include="Scripts\Seed\WeaponProperties.PostDeployment.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Seed\RangePropertyModifier.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Seed\VersatilityPropertyModifier.PostDeployment.sql" />
+  </ItemGroup>
 </Project>

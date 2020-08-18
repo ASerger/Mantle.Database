@@ -42,3 +42,27 @@ BEGIN
 	SET IDENTITY_INSERT dbo.WeaponProperties OFF
 END
 GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.WeaponProperties WHERE Id = 6)
+BEGIN
+	SET IDENTITY_INSERT dbo.WeaponProperties ON
+	INSERT INTO dbo.WeaponProperties(Id, BasePropertyId, BaseWeaponCategoryId)
+	VALUES(6, 
+	(SELECT Id FROM dbo.BaseProperty WHERE Property = 'Thrown'), 
+	(SELECT Id FROM dbo.BaseWeaponCategory WHERE WeaponCategory = 'Spear')
+	)
+	SET IDENTITY_INSERT dbo.WeaponProperties OFF
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.WeaponProperties WHERE Id = 7)
+BEGIN
+	SET IDENTITY_INSERT dbo.WeaponProperties ON
+	INSERT INTO dbo.WeaponProperties(Id, BasePropertyId, BaseWeaponCategoryId)
+	VALUES(7, 
+	(SELECT Id FROM dbo.BaseProperty WHERE Property = 'Versatile'), 
+	(SELECT Id FROM dbo.BaseWeaponCategory WHERE WeaponCategory = 'Spear')
+	)
+	SET IDENTITY_INSERT dbo.WeaponProperties OFF
+END
+GO
