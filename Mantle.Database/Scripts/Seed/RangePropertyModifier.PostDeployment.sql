@@ -13,7 +13,7 @@ IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.RangePropertyModifier WHERE Id = 2)
 BEGIN
 	SET IDENTITY_INSERT dbo.RangePropertyModifier ON
 	INSERT INTO dbo.RangePropertyModifier(Id, ModifierDescription, BasePropertyId, BaseWeaponCategoryId)
-	VALUES(2, '(5/15)', 
+	VALUES(2, '(20/60)', 
 	(SELECT Id FROM dbo.BaseProperty WHERE Property = 'Thrown'), 
 	(SELECT Id FROM dbo.BaseWeaponCategory WHERE WeaponCategory = 'Spear'))
 	SET IDENTITY_INSERT dbo.RangePropertyModifier OFF
