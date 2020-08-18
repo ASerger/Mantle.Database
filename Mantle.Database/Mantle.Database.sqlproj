@@ -75,6 +75,8 @@
     <Build Include="dbo\Tables\BaseProperty.sql" />
     <Build Include="dbo\Tables\BaseWeaponCategory.sql" />
     <Build Include="dbo\Tables\ComplexDice.sql" />
+    <Build Include="dbo\Tables\VersatilePropertyModifier.sql" />
+    <Build Include="dbo\Tables\RangePropertyModifier.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\Seed\EffectClass.PostDeployment.sql" />
