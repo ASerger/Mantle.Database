@@ -107,7 +107,7 @@ BEGIN
 	INSERT INTO dbo.WeaponProperties(Id, BasePropertyId, BaseWeaponCategoryId)
 	VALUES(10, 
 	(SELECT Id FROM dbo.BaseProperty WHERE Property = 'Thrown'), 
-	(SELECT Id FROM dbo.BaseWeaponCategory WHERE WeaponCategory = 'Javlin')
+	(SELECT Id FROM dbo.BaseWeaponCategory WHERE WeaponCategory = 'Javelin')
 	)
 	SET IDENTITY_INSERT dbo.WeaponProperties OFF
 END

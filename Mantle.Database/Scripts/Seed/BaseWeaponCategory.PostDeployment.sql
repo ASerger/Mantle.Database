@@ -27,7 +27,7 @@ BEGIN
 END
 GO
 
-IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseWeaponCategory WHERE Id = 'Great Club')
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseWeaponCategory WHERE WeaponCategory = 'Great Club')
 BEGIN
 	INSERT INTO dbo.BaseWeaponCategory(WeaponCategory, Cost, Weight, BaseDiceId, DamageTypeId)
 	VALUES('Great Club', 0.20, 10, 
