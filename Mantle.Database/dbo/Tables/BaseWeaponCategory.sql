@@ -5,6 +5,8 @@ CREATE TABLE [dbo].[BaseWeaponCategory] (
     [Weight]            NUMERIC(4,2)    NOT NULL,
     [DamageTypeId]      INT             NOT NULL,
     [BaseDiceId]        INT             NOT NULL,
+    [IsMartial]         BIT             CONSTRAINT [DF_BaseWeaponCategory_IsMartial] DEFAULT 0 NOT NULL,
+    [IsRange]           BIT             CONSTRAINT [DF_BaseWeaponCategory_IsRange]  DEFAULT 0 NOT NULL,
     [ModifiedOn]        DATETIMEOFFSET  CONSTRAINT [DF_BaseWeaponCategory_ModifiedOn] DEFAULT SYSDATETIMEOFFSET() NOT NULL,
     [ModifiedBy]        VARCHAR(100)    CONSTRAINT [DF_BaseWeaponCategory_ModifiedBy] DEFAULT SUSER_SNAME() NOT NULL,
     CONSTRAINT [PK_BaseWeaponCategory_Id] PRIMARY KEY CLUSTERED ([Id] ASC)
