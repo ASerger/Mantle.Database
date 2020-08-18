@@ -12,6 +12,19 @@ This script must be set to PostDeploy in the file properties, and all called scr
 --------------------------------------------------------------------------------------
 */
 
+--Order is eventually going to matter more here as seed data comes into existence. Will pay to remain attentive to that requirement
+
+--parent tables:
 :r .\Seed\EffectClass.PostDeployment.sql
 :r .\Seed\EffectType.PostDeployment.sql
 :r .\Seed\RarityLevel.PostDeployment.sql
+:r .\Seed\DamageType.PostDeployment.sql
+:r .\Seed\BaseDice.PostDeployment.sql
+:r .\Seed\BaseProperty.PostDeployment.sql
+
+--child tables:
+:r .\Seed\BaseWeaponCategory.PostDeployment.sql
+:r .\Seed\WeaponProperties.PostDeployment.sql
+:r .\Seed\ComplexDice.PostDeployment.sql
+:r .\Seed\VersatilityPropertyModifier.PostDeployment.sql
+:r .\Seed\RangePropertymodifier.PostDeployment.sql
