@@ -107,3 +107,58 @@ BEGIN
 	SET IDENTITY_INSERT dbo.RangePropertyModifier OFF
 END
 GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.RangePropertyModifier WHERE Id = 11)
+BEGIN
+	SET IDENTITY_INSERT dbo.RangePropertyModifier ON
+	INSERT INTO dbo.RangePropertyModifier(Id, ModifierDescription, BasePropertyId, BaseWeaponCategoryId)
+	VALUES(11, '(range 20/60)', 
+	(SELECT Id FROM dbo.BaseProperty WHERE Property = 'Thrown'), 
+	(SELECT Id FROM dbo.BaseWeaponCategory WHERE WeaponCategory = 'Trident'))
+	SET IDENTITY_INSERT dbo.RangePropertyModifier OFF
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.RangePropertyModifier WHERE Id = 12)
+BEGIN
+	SET IDENTITY_INSERT dbo.RangePropertyModifier ON
+	INSERT INTO dbo.RangePropertyModifier(Id, ModifierDescription, BasePropertyId, BaseWeaponCategoryId)
+	VALUES(12, '(range 25/100)', 
+	(SELECT Id FROM dbo.BaseProperty WHERE Property = 'Ammunition'), 
+	(SELECT Id FROM dbo.BaseWeaponCategory WHERE WeaponCategory = 'Blowgun'))
+	SET IDENTITY_INSERT dbo.RangePropertyModifier OFF
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.RangePropertyModifier WHERE Id = 13)
+BEGIN
+	SET IDENTITY_INSERT dbo.RangePropertyModifier ON
+	INSERT INTO dbo.RangePropertyModifier(Id, ModifierDescription, BasePropertyId, BaseWeaponCategoryId)
+	VALUES(13, '(range 30/120)', 
+	(SELECT Id FROM dbo.BaseProperty WHERE Property = 'Ammunition'), 
+	(SELECT Id FROM dbo.BaseWeaponCategory WHERE WeaponCategory = 'Hand Crossbow'))
+	SET IDENTITY_INSERT dbo.RangePropertyModifier OFF
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.RangePropertyModifier WHERE Id = 14)
+BEGIN
+	SET IDENTITY_INSERT dbo.RangePropertyModifier ON
+	INSERT INTO dbo.RangePropertyModifier(Id, ModifierDescription, BasePropertyId, BaseWeaponCategoryId)
+	VALUES(14, '(range 100/400)', 
+	(SELECT Id FROM dbo.BaseProperty WHERE Property = 'Ammunition'), 
+	(SELECT Id FROM dbo.BaseWeaponCategory WHERE WeaponCategory = 'Heavy Crossbow'))
+	SET IDENTITY_INSERT dbo.RangePropertyModifier OFF
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.RangePropertyModifier WHERE Id = 15)
+BEGIN
+	SET IDENTITY_INSERT dbo.RangePropertyModifier ON
+	INSERT INTO dbo.RangePropertyModifier(Id, ModifierDescription, BasePropertyId, BaseWeaponCategoryId)
+	VALUES(15, '(range 150/600)', 
+	(SELECT Id FROM dbo.BaseProperty WHERE Property = 'Ammunition'), 
+	(SELECT Id FROM dbo.BaseWeaponCategory WHERE WeaponCategory = 'Longbow'))
+	SET IDENTITY_INSERT dbo.RangePropertyModifier OFF
+END
+GO
