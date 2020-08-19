@@ -185,3 +185,261 @@ BEGIN
 	)
 END
 GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseWeaponCategory WHERE BaseWeaponCategory.WeaponCategory = 'Battleaxe')
+BEGIN
+	INSERT INTO dbo.BaseWeaponCategory(WeaponCategory, Cost, Weight, BaseDiceId, DamageTypeId, IsMartial)
+	VALUES(
+	'Battleaxe', 10.00, 4.00, 
+	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d8'), 
+	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Slashing'),
+	1
+	)
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseWeaponCategory WHERE BaseWeaponCategory.WeaponCategory = 'Flail')
+BEGIN
+	INSERT INTO dbo.BaseWeaponCategory(WeaponCategory, Cost, Weight, BaseDiceId, DamageTypeId, IsMartial)
+	VALUES(
+	'Flail', 10.00, 2.00, 
+	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d8'), 
+	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Bludgeoning'),
+	1
+	)
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseWeaponCategory WHERE BaseWeaponCategory.WeaponCategory = 'Glaive')
+BEGIN
+	INSERT INTO dbo.BaseWeaponCategory(WeaponCategory, Cost, Weight, BaseDiceId, DamageTypeId, IsMartial)
+	VALUES(
+	'Glaive', 20.00, 6.00, 
+	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d10'), 
+	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Slashing'),
+	1
+	)
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseWeaponCategory WHERE BaseWeaponCategory.WeaponCategory = 'Greataxe')
+BEGIN
+	INSERT INTO dbo.BaseWeaponCategory(WeaponCategory, Cost, Weight, BaseDiceId, DamageTypeId, IsMartial)
+	VALUES(
+	'Greataxe', 30.00, 7.00, 
+	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d12'), 
+	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Slashing'),
+	1
+	)
+END
+GO
+
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseWeaponCategory WHERE BaseWeaponCategory.WeaponCategory = 'Greatsword')
+BEGIN
+	INSERT INTO dbo.BaseWeaponCategory(WeaponCategory, Cost, Weight, BaseDiceId, DamageTypeId, IsMartial)
+	VALUES(
+	'Greatsword', 50.00, 6.00, 
+	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '2d6'), 
+	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Slashing'),
+	1
+	)
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseWeaponCategory WHERE BaseWeaponCategory.WeaponCategory = 'Halberd')
+BEGIN
+	INSERT INTO dbo.BaseWeaponCategory(WeaponCategory, Cost, Weight, BaseDiceId, DamageTypeId, IsMartial)
+	VALUES(
+	'Halberd', 20.00, 6.00, 
+	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d10'), 
+	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Slashing'),
+	1
+	)
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseWeaponCategory WHERE BaseWeaponCategory.WeaponCategory = 'Longsword')
+BEGIN
+	INSERT INTO dbo.BaseWeaponCategory(WeaponCategory, Cost, Weight, BaseDiceId, DamageTypeId, IsMartial)
+	VALUES(
+	'Longsword', 15.00, 3.00, 
+	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d8'), 
+	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Slashing'),
+	1
+	)
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseWeaponCategory WHERE BaseWeaponCategory.WeaponCategory = 'Maul')
+BEGIN
+	INSERT INTO dbo.BaseWeaponCategory(WeaponCategory, Cost, Weight, BaseDiceId, DamageTypeId, IsMartial)
+	VALUES(
+	'Maul', 10.00, 10.00, 
+	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '2d6'), 
+	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Bludgeoning'),
+	1
+	)
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseWeaponCategory WHERE BaseWeaponCategory.WeaponCategory = 'Morningstar')
+BEGIN
+	INSERT INTO dbo.BaseWeaponCategory(WeaponCategory, Cost, Weight, BaseDiceId, DamageTypeId, IsMartial)
+	VALUES(
+	'Morningstar', 15.00, 4.00, 
+	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d8'), 
+	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Piercing'),
+	1
+	)
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseWeaponCategory WHERE BaseWeaponCategory.WeaponCategory = 'Pike')
+BEGIN
+	INSERT INTO dbo.BaseWeaponCategory(WeaponCategory, Cost, Weight, BaseDiceId, DamageTypeId, IsMartial)
+	VALUES(
+	'Pike', 5.00, 18.00, 
+	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d10'), 
+	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Piercing'),
+	1
+	)
+END
+GO
+
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseWeaponCategory WHERE BaseWeaponCategory.WeaponCategory = 'Rapier')
+BEGIN
+	INSERT INTO dbo.BaseWeaponCategory(WeaponCategory, Cost, Weight, BaseDiceId, DamageTypeId, IsMartial)
+	VALUES(
+	'Rapier', 25.00, 2.00, 
+	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d8'), 
+	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Piercing'),
+	1
+	)
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseWeaponCategory WHERE BaseWeaponCategory.WeaponCategory = 'Scimitar')
+BEGIN
+	INSERT INTO dbo.BaseWeaponCategory(WeaponCategory, Cost, Weight, BaseDiceId, DamageTypeId, IsMartial)
+	VALUES(
+	'Scimitar', 25.00, 3.00, 
+	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d6'), 
+	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Slashing'),
+	1
+	)
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseWeaponCategory WHERE BaseWeaponCategory.WeaponCategory = 'Shortsword')
+BEGIN
+	INSERT INTO dbo.BaseWeaponCategory(WeaponCategory, Cost, Weight, BaseDiceId, DamageTypeId, IsMartial)
+	VALUES(
+	'Shortsword', 10.00, 2.00, 
+	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d6'), 
+	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Piercing'),
+	1
+	)
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseWeaponCategory WHERE BaseWeaponCategory.WeaponCategory = 'Trident')
+BEGIN
+	INSERT INTO dbo.BaseWeaponCategory(WeaponCategory, Cost, Weight, BaseDiceId, DamageTypeId, IsMartial)
+	VALUES(
+	'Trident', 5.00, 4.00, 
+	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d6'), 
+	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Piercing'),
+	1
+	)
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseWeaponCategory WHERE BaseWeaponCategory.WeaponCategory = 'War Pick')
+BEGIN
+	INSERT INTO dbo.BaseWeaponCategory(WeaponCategory, Cost, Weight, BaseDiceId, DamageTypeId, IsMartial)
+	VALUES(
+	'War Pick', 5.00, 2.00, 
+	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d8'), 
+	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Piercing'),
+	1
+	)
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseWeaponCategory WHERE BaseWeaponCategory.WeaponCategory = 'Warhammer')
+BEGIN
+	INSERT INTO dbo.BaseWeaponCategory(WeaponCategory, Cost, Weight, BaseDiceId, DamageTypeId, IsMartial)
+	VALUES(
+	'Warhammer', 15.00, 2.00, 
+	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d8'), 
+	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Bludgeoning'),
+	1
+	)
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseWeaponCategory WHERE BaseWeaponCategory.WeaponCategory = 'Whip')
+BEGIN
+	INSERT INTO dbo.BaseWeaponCategory(WeaponCategory, Cost, Weight, BaseDiceId, DamageTypeId, IsMartial)
+	VALUES(
+	'Whip', 2.00, 3.00, 
+	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d4'), 
+	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Slashing'),
+	1
+	)
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseWeaponCategory WHERE BaseWeaponCategory.WeaponCategory = 'Blowgun')
+BEGIN
+	INSERT INTO dbo.BaseWeaponCategory(WeaponCategory, Cost, Weight, BaseDiceId, DamageTypeId, IsMartial, IsRange)
+	VALUES(
+	'Blowgun', 10.00, 1.00, 
+	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d1'), 
+	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Piercing'),
+	1,
+	1
+	)
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseWeaponCategory WHERE BaseWeaponCategory.WeaponCategory = 'Hand Crossbow')
+BEGIN
+	INSERT INTO dbo.BaseWeaponCategory(WeaponCategory, Cost, Weight, BaseDiceId, DamageTypeId, IsMartial, IsRange)
+	VALUES(
+	'Hand Crossbow', 75.00, 3.00, 
+	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d6'), 
+	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Piercing'),
+	1,
+	1
+	)
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseWeaponCategory WHERE BaseWeaponCategory.WeaponCategory = 'Heavy Crossbow')
+BEGIN
+	INSERT INTO dbo.BaseWeaponCategory(WeaponCategory, Cost, Weight, BaseDiceId, DamageTypeId, IsMartial, IsRange)
+	VALUES(
+	'Heavy Crossbow', 50.00, 18.00, 
+	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d10'), 
+	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Piercing'),
+	1,
+	1
+	)
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseWeaponCategory WHERE BaseWeaponCategory.WeaponCategory = 'Longbow')
+BEGIN
+	INSERT INTO dbo.BaseWeaponCategory(WeaponCategory, Cost, Weight, BaseDiceId, DamageTypeId, IsMartial, IsRange)
+	VALUES(
+	'Longbow', 50.00, 2.00, 
+	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d8'), 
+	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Piercing'),
+	1,
+	1
+	)
+END
+GO
