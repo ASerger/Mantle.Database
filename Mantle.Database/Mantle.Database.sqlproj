@@ -77,6 +77,7 @@
     <Build Include="dbo\Tables\ComplexDice.sql" />
     <Build Include="dbo\Tables\VersatilePropertyModifier.sql" />
     <Build Include="dbo\Tables\RangePropertyModifier.sql" />
+    <Build Include="dbo\Tables\SpecialPropertyModifier.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\Seed\EffectClass.PostDeployment.sql" />
@@ -108,5 +109,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\Seed\VersatilityPropertyModifier.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Seed\SpecialPropertyModifier.PostDeployment.sql" />
   </ItemGroup>
 </Project>

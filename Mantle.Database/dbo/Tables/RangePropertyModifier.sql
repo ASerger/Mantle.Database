@@ -4,7 +4,7 @@
 	[ModifierDescription]	VARCHAR(20)	NOT NULL,
 	[BasePropertyId]		INT			NOT NULL,
 	[BaseWeaponCategoryId]	INT			NOT NULL,
-	CONSTRAINT [PK_RangeModifier_Id] PRIMARY KEY CLUSTERED ([Id] ASC)
+	CONSTRAINT [PK_RangePropertyModifier_Id] PRIMARY KEY CLUSTERED ([Id] ASC)
 )
 GO
 

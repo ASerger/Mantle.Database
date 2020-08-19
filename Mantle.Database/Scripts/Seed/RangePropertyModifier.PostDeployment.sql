@@ -96,3 +96,14 @@ BEGIN
 	SET IDENTITY_INSERT dbo.RangePropertyModifier OFF
 END
 GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.RangePropertyModifier WHERE Id = 10)
+BEGIN
+	SET IDENTITY_INSERT dbo.RangePropertyModifier ON
+	INSERT INTO dbo.RangePropertyModifier(Id, ModifierDescription, BasePropertyId, BaseWeaponCategoryId)
+	VALUES(10, '(range 5/15)', 
+	(SELECT Id FROM dbo.BaseProperty WHERE Property = 'Thrown'), 
+	(SELECT Id FROM dbo.BaseWeaponCategory WHERE WeaponCategory = 'Net'))
+	SET IDENTITY_INSERT dbo.RangePropertyModifier OFF
+END
+GO

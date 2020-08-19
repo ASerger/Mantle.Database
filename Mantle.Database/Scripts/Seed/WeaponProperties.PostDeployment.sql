@@ -268,3 +268,51 @@ BEGIN
 	SET IDENTITY_INSERT dbo.WeaponProperties OFF
 END
 GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.WeaponProperties WHERE Id = 24)
+BEGIN
+	SET IDENTITY_INSERT dbo.WeaponProperties ON
+	INSERT INTO dbo.WeaponProperties(Id, BasePropertyId, BaseWeaponCategoryId)
+	VALUES(24, 
+	(SELECT Id FROM dbo.BaseProperty WHERE Property = 'Reach'), 
+	(SELECT Id FROM dbo.BaseWeaponCategory WHERE WeaponCategory = 'Lance')
+	)
+	SET IDENTITY_INSERT dbo.WeaponProperties OFF
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.WeaponProperties WHERE Id = 25)
+BEGIN
+	SET IDENTITY_INSERT dbo.WeaponProperties ON
+	INSERT INTO dbo.WeaponProperties(Id, BasePropertyId, BaseWeaponCategoryId)
+	VALUES(25, 
+	(SELECT Id FROM dbo.BaseProperty WHERE Property = 'Special'), 
+	(SELECT Id FROM dbo.BaseWeaponCategory WHERE WeaponCategory = 'Lance')
+	)
+	SET IDENTITY_INSERT dbo.WeaponProperties OFF
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.WeaponProperties WHERE Id = 26)
+BEGIN
+	SET IDENTITY_INSERT dbo.WeaponProperties ON
+	INSERT INTO dbo.WeaponProperties(Id, BasePropertyId, BaseWeaponCategoryId)
+	VALUES(26, 
+	(SELECT Id FROM dbo.BaseProperty WHERE Property = 'Thrown'), 
+	(SELECT Id FROM dbo.BaseWeaponCategory WHERE WeaponCategory = 'Net')
+	)
+	SET IDENTITY_INSERT dbo.WeaponProperties OFF
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.WeaponProperties WHERE Id = 27)
+BEGIN
+	SET IDENTITY_INSERT dbo.WeaponProperties ON
+	INSERT INTO dbo.WeaponProperties(Id, BasePropertyId, BaseWeaponCategoryId)
+	VALUES(27, 
+	(SELECT Id FROM dbo.BaseProperty WHERE Property = 'Special'), 
+	(SELECT Id FROM dbo.BaseWeaponCategory WHERE WeaponCategory = 'Net')
+	)
+	SET IDENTITY_INSERT dbo.WeaponProperties OFF
+END
+GO
