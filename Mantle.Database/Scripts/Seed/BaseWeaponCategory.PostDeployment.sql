@@ -160,3 +160,28 @@ BEGIN
 	)
 END
 GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseWeaponCategory WHERE BaseWeaponCategory.WeaponCategory = 'Lance')
+BEGIN
+	INSERT INTO dbo.BaseWeaponCategory(WeaponCategory, Cost, Weight, BaseDiceId, DamageTypeId, IsMartial)
+	VALUES(
+	'Lance', 10.00, 6.00, 
+	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d12'), 
+	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Piercing'),
+	1
+	)
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseWeaponCategory WHERE BaseWeaponCategory.WeaponCategory = 'Net')
+BEGIN
+	INSERT INTO dbo.BaseWeaponCategory(WeaponCategory, Cost, Weight, BaseDiceId, DamageTypeId, IsMartial, IsRange)
+	VALUES(
+	'Net', 1.00, 3.00, 
+	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = 'N/A'), 
+	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'N/A'),
+	1,
+	1
+	)
+END
+GO
