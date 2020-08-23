@@ -12,7 +12,7 @@ BEGIN
 	INSERT INTO dbo.BaseWeaponCategory(WeaponCategory, Cost, Weight, BaseDiceId, DamageTypeId)
 	VALUES('Dagger', 2.00, 1, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d4'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Piercing')
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Piercing')
 	)
 END
 GO
@@ -22,7 +22,7 @@ BEGIN
 	INSERT INTO dbo.BaseWeaponCategory(WeaponCategory, Cost, Weight, BaseDiceId, DamageTypeId)
 	VALUES('Club', 0.10, 2, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d4'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Bludgeoning')
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Bludgeoning')
 	)
 END
 GO
@@ -32,7 +32,7 @@ BEGIN
 	INSERT INTO dbo.BaseWeaponCategory(WeaponCategory, Cost, Weight, BaseDiceId, DamageTypeId)
 	VALUES('Great Club', 0.20, 10, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d8'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Bludgeoning'))
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Bludgeoning'))
 END
 GO
 
@@ -42,7 +42,7 @@ BEGIN
 	VALUES(
 	'Spear', 1.00, 3, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d6'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Piercing')
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Piercing')
 	)
 END
 GO
@@ -53,7 +53,7 @@ BEGIN
 	VALUES(
 	'Handaxe', 5.00, 2, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d6'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Slashing')
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Slashing')
 	)
 END
 GO
@@ -64,7 +64,7 @@ BEGIN
 	VALUES(
 	'Javelin', 0.50, 2, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d6'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Piercing')
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Piercing')
 	)
 END
 GO
@@ -75,7 +75,7 @@ BEGIN
 	VALUES(
 	'Light Hammer', 2.00, 2, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d4'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Bludgeoning')
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Bludgeoning')
 	)
 END
 GO
@@ -86,7 +86,7 @@ BEGIN
 	VALUES(
 	'Mace', 5.00, 4, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d6'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Bludgeoning')
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Bludgeoning')
 	)
 END
 GO
@@ -97,7 +97,7 @@ BEGIN
 	VALUES(
 	'Quarterstaff', 0.20, 4, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d6'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Bludgeoning')
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Bludgeoning')
 	)
 END
 GO
@@ -108,7 +108,7 @@ BEGIN
 	VALUES(
 	'Sickle', 1.00, 2, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d4'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Slashing')
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Slashing')
 	)
 END
 GO
@@ -119,7 +119,7 @@ BEGIN
 	VALUES(
 	'Light Crossbow', 25.00, 5, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d8'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Piercing'),
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Piercing'),
 	1
 	)
 END
@@ -131,7 +131,7 @@ BEGIN
 	VALUES(
 	'Dart', 0.05, 0.25, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d4'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Piercing'),
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Piercing'),
 	1
 	)
 END
@@ -143,7 +143,7 @@ BEGIN
 	VALUES(
 	'Shortbow', 25.00, 2.00, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d6'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Piercing'),
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Piercing'),
 	1
 	)
 END
@@ -155,7 +155,7 @@ BEGIN
 	VALUES(
 	'Sling', 0.10, 0.00, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d4'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Bludgeoning'),
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Bludgeoning'),
 	1
 	)
 END
@@ -167,7 +167,7 @@ BEGIN
 	VALUES(
 	'Lance', 10.00, 6.00, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d12'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Piercing'),
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Piercing'),
 	1
 	)
 END
@@ -179,7 +179,7 @@ BEGIN
 	VALUES(
 	'Net', 1.00, 3.00, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = 'N/A'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'N/A'),
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'N/A'),
 	1,
 	1
 	)
@@ -192,7 +192,7 @@ BEGIN
 	VALUES(
 	'Battleaxe', 10.00, 4.00, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d8'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Slashing'),
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Slashing'),
 	1
 	)
 END
@@ -204,7 +204,7 @@ BEGIN
 	VALUES(
 	'Flail', 10.00, 2.00, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d8'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Bludgeoning'),
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Bludgeoning'),
 	1
 	)
 END
@@ -216,7 +216,7 @@ BEGIN
 	VALUES(
 	'Glaive', 20.00, 6.00, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d10'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Slashing'),
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Slashing'),
 	1
 	)
 END
@@ -228,7 +228,7 @@ BEGIN
 	VALUES(
 	'Greataxe', 30.00, 7.00, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d12'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Slashing'),
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Slashing'),
 	1
 	)
 END
@@ -241,7 +241,7 @@ BEGIN
 	VALUES(
 	'Greatsword', 50.00, 6.00, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '2d6'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Slashing'),
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Slashing'),
 	1
 	)
 END
@@ -253,7 +253,7 @@ BEGIN
 	VALUES(
 	'Halberd', 20.00, 6.00, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d10'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Slashing'),
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Slashing'),
 	1
 	)
 END
@@ -265,7 +265,7 @@ BEGIN
 	VALUES(
 	'Longsword', 15.00, 3.00, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d8'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Slashing'),
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Slashing'),
 	1
 	)
 END
@@ -277,7 +277,7 @@ BEGIN
 	VALUES(
 	'Maul', 10.00, 10.00, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '2d6'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Bludgeoning'),
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Bludgeoning'),
 	1
 	)
 END
@@ -289,7 +289,7 @@ BEGIN
 	VALUES(
 	'Morningstar', 15.00, 4.00, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d8'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Piercing'),
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Piercing'),
 	1
 	)
 END
@@ -301,7 +301,7 @@ BEGIN
 	VALUES(
 	'Pike', 5.00, 18.00, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d10'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Piercing'),
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Piercing'),
 	1
 	)
 END
@@ -314,7 +314,7 @@ BEGIN
 	VALUES(
 	'Rapier', 25.00, 2.00, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d8'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Piercing'),
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Piercing'),
 	1
 	)
 END
@@ -326,7 +326,7 @@ BEGIN
 	VALUES(
 	'Scimitar', 25.00, 3.00, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d6'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Slashing'),
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Slashing'),
 	1
 	)
 END
@@ -338,7 +338,7 @@ BEGIN
 	VALUES(
 	'Shortsword', 10.00, 2.00, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d6'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Piercing'),
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Piercing'),
 	1
 	)
 END
@@ -350,7 +350,7 @@ BEGIN
 	VALUES(
 	'Trident', 5.00, 4.00, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d6'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Piercing'),
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Piercing'),
 	1
 	)
 END
@@ -362,7 +362,7 @@ BEGIN
 	VALUES(
 	'War Pick', 5.00, 2.00, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d8'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Piercing'),
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Piercing'),
 	1
 	)
 END
@@ -374,7 +374,7 @@ BEGIN
 	VALUES(
 	'Warhammer', 15.00, 2.00, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d8'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Bludgeoning'),
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Bludgeoning'),
 	1
 	)
 END
@@ -386,7 +386,7 @@ BEGIN
 	VALUES(
 	'Whip', 2.00, 3.00, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d4'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Slashing'),
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Slashing'),
 	1
 	)
 END
@@ -398,7 +398,7 @@ BEGIN
 	VALUES(
 	'Blowgun', 10.00, 1.00, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d1'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Piercing'),
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Piercing'),
 	1,
 	1
 	)
@@ -411,7 +411,7 @@ BEGIN
 	VALUES(
 	'Hand Crossbow', 75.00, 3.00, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d6'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Piercing'),
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Piercing'),
 	1,
 	1
 	)
@@ -424,7 +424,7 @@ BEGIN
 	VALUES(
 	'Heavy Crossbow', 50.00, 18.00, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d10'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Piercing'),
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Piercing'),
 	1,
 	1
 	)
@@ -437,7 +437,7 @@ BEGIN
 	VALUES(
 	'Longbow', 50.00, 2.00, 
 	(SELECT Id FROM dbo.BaseDice WHERE BaseDice.DiceDescription = '1d8'), 
-	(SELECT Id FROM dbo.DamageType WHERE DamageType.DamageType = 'Piercing'),
+	(SELECT Id FROM dbo.BaseDamageType WHERE BaseDamageType.DamageType = 'Piercing'),
 	1,
 	1
 	)

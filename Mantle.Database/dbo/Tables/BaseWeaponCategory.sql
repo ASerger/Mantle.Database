@@ -14,7 +14,7 @@ CREATE TABLE [dbo].[BaseWeaponCategory] (
 GO
 
 ALTER TABLE dbo.BaseWeaponCategory
-    ADD CONSTRAINT FK_BaseWeaponCategory_DamageType_Id FOREIGN KEY (DamageTypeId) REFERENCES dbo.DamageType(Id);
+    ADD CONSTRAINT FK_BaseWeaponCategory_BaseDamageType_Id FOREIGN KEY (DamageTypeId) REFERENCES dbo.BaseDamageType(Id);
 GO
 
 ALTER TABLE dbo.BaseWeaponCategory
