@@ -3,7 +3,7 @@ CREATE TABLE [dbo].[BaseWeaponCategory] (
     [WeaponCategory]    VARCHAR(20)     NOT NULL, -- sword / wand / stave
     [Cost]              NUMERIC(12,2)   NOT NULL,
     [Weight]            NUMERIC(4,2)    NOT NULL,
-    [DamageTypeId]      INT             NOT NULL,
+    [BaseDamageTypeId]  INT             NOT NULL,
     [BaseDiceId]        INT             NOT NULL,
     [IsMartial]         BIT             CONSTRAINT [DF_BaseWeaponCategory_IsMartial] DEFAULT 0 NOT NULL,
     [IsRange]           BIT             CONSTRAINT [DF_BaseWeaponCategory_IsRange]  DEFAULT 0 NOT NULL,
@@ -14,7 +14,7 @@ CREATE TABLE [dbo].[BaseWeaponCategory] (
 GO
 
 ALTER TABLE dbo.BaseWeaponCategory
-    ADD CONSTRAINT FK_BaseWeaponCategory_BaseDamageType_Id FOREIGN KEY (DamageTypeId) REFERENCES dbo.BaseDamageType(Id);
+    ADD CONSTRAINT FK_BaseWeaponCategory_BaseDamageType_Id FOREIGN KEY (BaseDamageTypeId) REFERENCES dbo.BaseDamageType(Id);
 GO
 
 ALTER TABLE dbo.BaseWeaponCategory
