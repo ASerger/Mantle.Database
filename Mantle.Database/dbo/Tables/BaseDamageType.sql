@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[DamageType](
+﻿CREATE TABLE [dbo].[BaseDamageType](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[DamageType] [varchar](20) NOT NULL,
 	[ModifiedOn] [datetimeoffset](7) NOT NULL,
@@ -10,11 +10,11 @@
 ) ON [PRIMARY]
 GO
 
-ALTER TABLE [dbo].[DamageType] ADD  CONSTRAINT [DF_DamageType_ModifiedOn]  DEFAULT (sysdatetimeoffset()) FOR [ModifiedOn]
+ALTER TABLE [dbo].[BaseDamageType] ADD  CONSTRAINT [DF_DamageType_ModifiedOn]  DEFAULT (sysdatetimeoffset()) FOR [ModifiedOn]
 GO
 
-ALTER TABLE [dbo].[DamageType] ADD  CONSTRAINT [DF_DamageType_ModifiedBy]  DEFAULT (suser_sname()) FOR [ModifiedBy]
+ALTER TABLE [dbo].[BaseDamageType] ADD  CONSTRAINT [DF_DamageType_ModifiedBy]  DEFAULT (suser_sname()) FOR [ModifiedBy]
 GO
 
-ALTER TABLE [dbo].[DamageType] ADD  CONSTRAINT [UQ_DamageType_DamageType] UNIQUE(DamageType)
+ALTER TABLE [dbo].[BaseDamageType] ADD  CONSTRAINT [UQ_DamageType_DamageType] UNIQUE(DamageType)
 GO
