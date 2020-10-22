@@ -65,7 +65,6 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\EffectClass.sql" />
-    <Build Include="dbo\Tables\EffectType.sql" />
     <Build Include="dbo\Tables\EnchantmentPoint.sql" />
     <Build Include="dbo\Tables\RarityLevel.sql" />
     <PostDeploy Include="Scripts\PostDeploy.sql" />
@@ -78,10 +77,10 @@
     <Build Include="dbo\Tables\VersatilePropertyModifier.sql" />
     <Build Include="dbo\Tables\RangePropertyModifier.sql" />
     <Build Include="dbo\Tables\SpecialPropertyModifier.sql" />
+    <Build Include="dbo\Tables\BaseWeaponEffect.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\Seed\EffectClass.PostDeployment.sql" />
-    <None Include="Scripts\Seed\EffectType.PostDeployment.sql" />
     <None Include="Scripts\Seed\RarityLevel.PostDeployment.sql" />
     <None Include="Serger_Mantle.Database.publish.xml" />
     <None Include="Serger_Mantle_UnsafeDeploy.Database.publish.xml" />
@@ -112,5 +111,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\Seed\SpecialPropertyModifier.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Seed\BaseWeaponEffect.PostDeployment.sql" />
   </ItemGroup>
 </Project>

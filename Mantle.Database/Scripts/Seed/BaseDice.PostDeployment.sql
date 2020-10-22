@@ -222,3 +222,66 @@ BEGIN
 	SET IDENTITY_INSERT dbo.BaseDice OFF
 END
 GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseDice WHERE Id = 25)
+BEGIN
+	SET IDENTITY_INSERT dbo.BaseDice ON
+	INSERT INTO dbo.BaseDice(Id, Count, Sides, DiceDescription)
+	VALUES(25, 3, 4, '3d4')
+	SET IDENTITY_INSERT dbo.BaseDice OFF
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseDice WHERE Id = 26)
+BEGIN
+	SET IDENTITY_INSERT dbo.BaseDice ON
+	INSERT INTO dbo.BaseDice(Id, Count, Sides, DiceDescription)
+	VALUES(26, 3, 6, '3d6')
+	SET IDENTITY_INSERT dbo.BaseDice OFF
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseDice WHERE Id = 27)
+BEGIN
+	SET IDENTITY_INSERT dbo.BaseDice ON
+	INSERT INTO dbo.BaseDice(Id, Count, Sides, DiceDescription)
+	VALUES(27, 3, 8, '3d8')
+	SET IDENTITY_INSERT dbo.BaseDice OFF
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseDice WHERE Id = 28)
+BEGIN
+	SET IDENTITY_INSERT dbo.BaseDice ON
+	INSERT INTO dbo.BaseDice(Id, Count, Sides, DiceDescription)
+	VALUES(28, 3, 10, '3d10')
+	SET IDENTITY_INSERT dbo.BaseDice OFF
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseDice WHERE Id = 29)
+BEGIN
+	SET IDENTITY_INSERT dbo.BaseDice ON
+	INSERT INTO dbo.BaseDice(Id, Count, Sides, DiceDescription)
+	VALUES(29, 3, 12, '3d12')
+	SET IDENTITY_INSERT dbo.BaseDice OFF
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseDice WHERE Id = 30)
+BEGIN
+	SET IDENTITY_INSERT dbo.BaseDice ON
+	INSERT INTO dbo.BaseDice(Id, Count, Sides, DiceDescription)
+	VALUES(30, 3, 20, '3d20')
+	SET IDENTITY_INSERT dbo.BaseDice OFF
+END
+GO
+
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.BaseDice WHERE Id = 31)
+BEGIN
+	SET IDENTITY_INSERT dbo.BaseDice ON
+	INSERT INTO dbo.BaseDice(Id, Count, Sides, DiceDescription)
+	VALUES(31, 3, 100, '3d100')
+	SET IDENTITY_INSERT dbo.BaseDice OFF
+END
+GO

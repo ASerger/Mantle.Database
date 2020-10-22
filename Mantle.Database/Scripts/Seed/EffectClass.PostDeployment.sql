@@ -1,35 +1,27 @@
-﻿IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.EffectClass WHERE Id = 1)
+﻿IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.EffectClass WHERE EffectName = 'Minor')
 BEGIN
-	SET IDENTITY_INSERT dbo.EffectClass ON
-	INSERT INTO dbo.EffectClass(Id, EffectName, DiceCount)
-	VALUES(1, 'Minor', 1)
-	SET IDENTITY_INSERT dbo.EffectClass OFF
+	INSERT INTO dbo.EffectClass(EffectName)
+	VALUES('Minor')
 END
 GO
 
-IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.EffectClass WHERE Id = 2)
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.EffectClass WHERE EffectName = 'Lesser')
 BEGIN
-	SET IDENTITY_INSERT dbo.EffectClass ON
-	INSERT INTO dbo.EffectClass(Id, EffectName, DiceCount)
-	VALUES(2, 'Lesser', 2)
-	SET IDENTITY_INSERT dbo.EffectClass OFF
+	INSERT INTO dbo.EffectClass(EffectName)
+	VALUES('Lesser')
 END
 GO
 
-IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.EffectClass WHERE Id = 3)
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.EffectClass WHERE EffectName = 'Greater')
 BEGIN
-	SET IDENTITY_INSERT dbo.EffectClass ON
-	INSERT INTO dbo.EffectClass(Id, EffectName, DiceCount)
-	VALUES(3, 'Greater', 3)
-	SET IDENTITY_INSERT dbo.EffectClass OFF
+	INSERT INTO dbo.EffectClass(EffectName)
+	VALUES('Greater')
 END
 GO
 
-IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.EffectClass WHERE Id = 4)
+IF NOT EXISTS (SELECT TOP 1 Id FROM dbo.EffectClass WHERE EffectName = 'Exceptional')
 BEGIN
-	SET IDENTITY_INSERT dbo.EffectClass ON
-	INSERT INTO dbo.EffectClass(Id, EffectName, DiceCount)
-	VALUES(4, 'Exceptional', 4)
-	SET IDENTITY_INSERT dbo.EffectClass OFF
+	INSERT INTO dbo.EffectClass(EffectName)
+	VALUES('Exceptional')
 END
 GO
