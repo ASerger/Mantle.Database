@@ -10,7 +10,7 @@
     [ModifiedBy]			VARCHAR(100)    CONSTRAINT [DF_BaseWeaponEffect_ModifiedBy] DEFAULT SUSER_SNAME() NOT NULL,
     CONSTRAINT [PK_BaseWeaponEffect_Id] PRIMARY KEY CLUSTERED ([Id] ASC)
 )
-GO;
+GO
 
 ALTER TABLE dbo.BaseWeaponEffect
     ADD CONSTRAINT FK_BaseWeaponEffect_BaseDice_Id FOREIGN KEY (BaseDiceId) REFERENCES dbo.BaseDice(Id);

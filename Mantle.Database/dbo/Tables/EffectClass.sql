@@ -5,4 +5,4 @@
     [ModifiedBy]    VARCHAR(100)    CONSTRAINT [DF_EffectClass_ModifiedBy] DEFAULT SUSER_SNAME() NOT NULL,
     CONSTRAINT [PK_EffectClass_Id] PRIMARY KEY CLUSTERED ([Id] ASC)
 )
-GO;
+GO
